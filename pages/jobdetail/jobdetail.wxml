@@ -1,0 +1,48 @@
+<!--pages/jobdetail/jobdetail.wxml-->
+<view class="contain">
+    <view class="job_type">
+        <p class="job_name">
+            <span>{{job_name}}</span>
+            <image src="{{imgPath}}" class="sex" wx:if="{{show}}" mode="widthFix"></image>
+            <!-- <image src="../../image/women.png" class="sex" wx:if="{{show}}" mode="widthFix"></image> -->
+        </p>
+        <view class="job_msg">
+            <span class="span">
+                <image src="../../image/address.png" mode="widthFix"></image>
+                <span class="address">{{address}}</span>
+            </span>
+            <span class="span">
+                <image src="../../image/age.png" mode="widthFix"></image>
+                <span class="age">{{age}}</span>
+            </span>
+            <span class="span">
+                <image src="../../image/job_style.png" mode="widthFix"></image>
+                <span class="type">{{job_type}}</span>
+            </span>
+            <span class="span">
+                <image src="../../image/education.png" mode="widthFix"></image>
+                <span class="education">{{education}}</span>
+            </span>
+        </view>
+    </view>
+    <view class="job_ability">
+        <p>职责描述</p>
+        <view class="job_require" style="margin-bottom: 0.7rem;">
+            <p class="title">岗位要求</p>
+            <view class="require_msg">
+                
+            </view>
+        </view>
+        <view class="job_require">
+            <p class="title">任职要求</p>
+            <view class="require_msg2">
+                <view>学历：{{education}}</view>
+                <view>工作年限：{{age}}</view>
+                <view>专业：{{major}}</view>
+                <view>工作类型（兼职/全职）：{{job_type}}</view>
+            </view>
+        </view>
+    </view>
+    
+</view>
+<view class="call_mobile" bindtap="call">拨打电话</view>

@@ -1,0 +1,34 @@
+<view class="top">
+  	<view class="title">鲍蕙荞钢琴艺术培训学校</view>
+</view>
+<view class="search">  
+	<view class="search_title">
+		教学视频
+	</view>
+	<view class="search-result">  
+		<scroll-view scroll-y="true" bindscrolltolower="searchScrollLower">  
+		<view class="result-item" wx:for="{{searchSongList}}" wx:key="unique"  data-data="{{item}}">  
+			<view class="li" bindtap="play_video" data-data="{{item}}" style="background:url({{(item.videoCover?url + item.videoCover:defaultPath)}}) no-repeat;background-position:center;background-size:100%;">
+			    <image src="../../image/pause.png" class="pause"></image>
+			</view>
+			<view class="time">上传时间：{{item.createTime}}</view>
+			<view class="bottomList">
+			<view class="list">
+				<image src="../../image/zan.png" mode="widthFix"></image>
+				<i>{{item.likeCount}}</i>
+			</view>
+			<view class="list">
+				<image src="../../image/pinglun.png" mode="widthFix"></image>
+				<i>{{item.commentCount}}</i>
+			</view>
+			<view class="list last">
+				<image src="../../image/share.png" mode="widthFix"></image>
+				<i>{{item.shareCount}}</i>
+			</view>
+			</view>
+		</view>  
+		<view class="loading" hidden="{{!searchLoading}}">正在载入更多...</view>  
+		<view class="loading complete" hidden="{{!searchLoadingComplete}}">已加载全部</view>  
+		</scroll-view>    
+	</view>  
+</view>  

@@ -1,0 +1,16 @@
+<!--pages/serach/serach.wxml-->
+<view class="contain">
+    <view class="top">
+        <view class="searchBox">
+            <image src="../../image/icon_search.png" id="search" mode="widthFix"></image>	
+            <input type="text" placeholder="输入关键字，搜索艺培机构" id="autotext" bindinput="valueInput"/>
+        </view>
+        <view class="cancel" id="search"  bindtap="search">搜索</view>
+    </view>
+    <ul class="search_list">
+        <li wx:if="{{show}}">没有搜索到此校区</li>
+        <block wx:for="{{schoolArray}}" wx:key="item" wx:if="{{!show}}">
+            <li data-id="{{item.id}}" data-lat="{{item.lat}}" data-lng="{{item.lng}}" data-schoolname="{{item.addressDesc}}" bindtap="toMap">{{item.institutionName}}({{item.addressDesc}})</li>
+        </block>
+    </ul>
+</view>

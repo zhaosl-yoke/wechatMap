@@ -1,0 +1,121 @@
+/* pages/restpsd/restpsd.wxss */
+/* pages/login/login.wxss */
+page{
+  font-family:"苹方-简","华文细黑","微软雅黑", "Microsoft YaHei","sans-serif"; 
+  font-size: 32rpx;
+  background: #ccc;
+  height:100%;
+}
+.contain{
+    height: 100%;
+    display: flex;
+	background: url(https://zslzhaoshuli.github.io/map/img2/bg_login.png) no-repeat;
+	background-size: 100%;
+	padding: 0 85rpx;
+	box-sizing: border-box;
+    flex-direction: column;
+    align-items: left;
+    justify-content: flex-start;
+}
+/* 发送验证码按钮隐藏，并展示倒数60s提示 */
+.hide{
+    display: none;
+    line-height: 62rpx;
+    background: #ccc; 
+    border-radius: 5rpx;
+    font-size: 26rpx;
+    color: #fff;
+    padding: 0 10rpx;
+    box-sizing: border-box;
+}
+.show{
+    display: block;
+    line-height: 62rpx;
+    background: #f44a33;
+    border-radius: 5rpx;
+    font-size: 26rpx;
+    color: #fff;
+    padding: 0 10rpx;
+    box-sizing: border-box;
+}
+#code{
+    background: #ccc;
+}
+.inputs{
+	margin-top: 300rpx;
+}
+.input{
+	position: relative;
+	display: flex;
+	align-items: center;
+	height: 106rpx;
+	border-bottom: solid 1px #eee;
+}
+.input .mobile_top{
+	border-right: solid 1px #eee;
+	padding-right: 20rpx;
+	font-size: 30rpx;
+}
+.input .mobile{
+	width: 300rpx;
+}
+.input input{
+	flex: 1;
+	padding: 20rpx 0;
+	border: none;
+	outline: none;
+	font-size: 28rpx;
+	margin: 0 25rpx;
+}
+.input .code {
+    line-height: 62rpx;
+    /* background: #ccc; */
+    background: #f44a33;
+    border-radius: 5rpx;
+    font-size: 26rpx;
+    color: #fff;
+    padding: 0 10rpx;
+    box-sizing: border-box;
+}
+.input .look{
+	width: 32rpx;
+	margin-right: 20rpx;
+    padding: 20rpx 0;
+}
+.color{
+	color: #999;
+}
+.register{
+	height: 60rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 200rpx;
+}
+.register span{
+	padding: 0 5rpx 10rpx 5rpx;
+    border-bottom: solid 1px #f44a33;
+    color: #f44a33;
+}
+.btn{
+	height: 87rpx;
+	line-height: 87rpx;
+	color: #fff;
+	background: #f89e93;
+	border-radius: 40rpx;
+	box-shadow: 0 0 2rpx #ccc;
+	text-align: center;
+	letter-spacing: 1px;
+	margin-top: 150rpx;
+}
+.btn_active{
+	height: 87rpx;
+	line-height: 87rpx;
+	color: #fff;
+	background: #f44a33;
+	border-radius: 40rpx;
+	box-shadow: 0 0 20rpx #ccc;
+	text-align: center;
+	letter-spacing: 1px;
+	margin-top: 150rpx;
+}

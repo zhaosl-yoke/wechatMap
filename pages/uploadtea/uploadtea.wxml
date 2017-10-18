@@ -1,0 +1,16 @@
+<!--pages/uploadtea/uploadtea.wxml-->
+<view id="contain">
+    <view class="section">
+        <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+            <view class="video picker" style="background:{{flag?'#000':'#ededed'}}" bindtap="uploadFile">
+                <image src="../../image/camera.png" mode="widthFix"></image>
+                <span class="text">添加视频/图片</span>
+                <span class="size">请上传小于20M的视频或小于5M的图片</span>
+            </view> 
+        </picker>
+    </view>
+    <view class="title">
+        <input type="text" placeholder="请输入标题" bindinput="titleInput"/>
+    </view>
+</view>
+<view class="publish">发布</view>

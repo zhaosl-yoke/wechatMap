@@ -1,0 +1,158 @@
+@import "../../libs/common.wxss";
+@import '../../libs/icon.wxss';
+page{
+  font-family:"苹方-简","华文细黑","微软雅黑", "Microsoft YaHei","sans-serif"; 
+}
+.placeholder{
+  color: #ffffff;
+  font-size: 28rpx;
+}
+.contain{
+  width:100%;
+	height:100vh;
+  text-align: center;
+  padding: 0 60rpx;
+  padding-top:100rpx;
+  background:url(https://zslzhaoshuli.github.io/json/bg.png) no-repeat center center;
+  background-size:cover;
+  box-sizing: border-box;
+}
+#logo{
+  width:210rpx;
+}
+#title{
+  width:312rpx;
+  display: block;
+  margin:15rpx auto;
+  }
+
+.login{
+  width:620rpx;
+  margin:0 auto;
+  box-sizing:border-box;
+  padding:0  35rpx; 
+  margin-top: 60rpx;
+  position: relative;
+  background:rgba(0,0,0,0.3);
+  color:#fff;
+  border-radius: 15rpx;
+}
+.login .input {
+    position: relative;
+    height: 125rpx;
+    display: -webkit-box;
+    color: #fff;
+    display: flex;
+    align-items:center;
+}
+.error:after{
+  font-family:"iconfont" !important;
+  font-size: 24px;
+  font-style:normal;
+  content: '\e600';
+  color: #ffffff;
+  padding-right: 10px;
+  vertical-align: middle;
+  box-sizing: border-box;
+}
+
+.login .input:nth-child(1){
+	 border-bottom:1rpx solid #fff;
+}
+.login .input .left {
+    width: 100rpx;
+    display: flex;
+    justify-content:center ;
+    align-items:center;
+}
+
+.left image{
+	width:28rpx;
+}
+.input input {
+    margin-top: 10rpx;
+	  width:400rpx;
+    height:35rpx;
+    background:none;
+    border:none;
+    color: #fff;
+    text-align: left;
+}
+
+/* .login .error{
+	width:25rpx;
+	position:absolute;
+	right:50rpx;
+	display: none;
+	background:#fff;
+	opacity: 0.8;
+} */
+
+.confirm{
+	margin-top:100rpx;
+}
+
+.login .info1,.info2{
+  position:absolute;
+  top:80rpx;
+  font-size:24rpx;
+  color:#F44933;
+  opacity: 1!important;
+  text-align: left;
+  display: none;
+  left:120rpx;
+}
+#msg{
+  width: 285rpx;
+}
+.receive{
+  background: #f44933;
+  padding: 20rpx 12rpx;
+  color: #fff;
+  font-size: 28rpx;
+  border-radius: 10rpx;
+}
+
+
+.animate{
+  width: 100%;
+  height: 84rpx;
+  position: absolute;
+  right: -620rpx;
+  top: 40rpx;
+  background: rgba(116,163,237,0.7);
+  border-radius: 40rpx 0 0rpx 40rpx;
+  display: flex;
+  align-items: center;
+}
+.less{ 
+  width: 60rpx;
+  height: 60rpx;
+}
+.less1{
+  margin-left: 20rpx;
+}
+.less2{
+  margin-left: -30rpx;
+}
+.eidt{
+  align-self: center;
+  font-size: 30rpx;
+  color: #fff;
+  margin-left: 60rpx;
+}
+.eidt text{
+  font-size: 36rpx;
+}
+.close_icon:after{
+  font-family:"iconfont" !important;
+  font-size:24px;
+  font-style:normal;
+  content: '\e600';
+  margin-left: 40rpx;
+  color: #fff;
+  font-weight: normal;
+}
+.login2{
+  display: inline;
+}

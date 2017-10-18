@@ -1,0 +1,36 @@
+<view class="contain">
+	<image  src="../../image/logo.png" alt="" id="logo" mode="widthFix"></image>
+	<image  src="../../image/title.png" alt="" id="title" mode="widthFix"></image>
+	<view class="login">
+		<view class="input borB">
+			<view class="left">
+				<image  src="../../image/peo.png" alt=""  mode="widthFix"></image>
+			</view>
+			<p class="info1">请输入正确手机号</p>
+			<input type="number" id="user" oninput="errorShow()" placeholder="请输入您的主账号电话" placeholder-class="placeholder"/>
+			<view class="error" bindtap="clearVal" wx-if="{{show}}"></view>
+		</view>
+		<view class="input borB">
+			<view class="left">
+				<image  src="../../image/lock.png" alt=""  mode="widthFix"></image>
+			</view>
+			<p class="info2">请输入正确的短信验证码</p>
+			<input type="number" id="msg" placeholder="请输入短信验证码"  placeholder-class="placeholder"/>
+			<view class="receive">获取验证码</view>
+		</view>
+		<view class="input">
+			<view class="left">
+				<image  src="../../image/lock.png" alt=""  mode="widthFix"></image>
+			</view>
+			<p class="info2">请输入6~12位数字或字母</p>
+			<input type="password" id="psd" placeholder="请输入6~12位数字或字母" minlength="6" maxlength="12" placeholder-class="placeholder"/>
+		</view>
+	</view>
+	<button class="confirm" bindtap="success">注册</button>
+	<view class="animate" bindtap="open" animation="{{animationData}}"> 
+		<image src="../../image/less.png" class="less less1" ></image>
+		<image src="../../image/less.png" class="less less2" ></image>
+		<view class="eidt" >需要编辑地图信息？点击<view bindtap="login" class="login2">登录</view>吧>></view>
+		<view class="close_icon"  catchtap="close_animate"></view>
+	</view>
+</view>

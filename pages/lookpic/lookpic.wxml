@@ -1,0 +1,4 @@
+<!--pages/lookpic/lookpic.wxml-->
+<view class="video-content">
+    <image src="{{imgUrl}}" id="img" mode="widthFix"></image>
+</view>

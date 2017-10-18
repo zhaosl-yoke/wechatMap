@@ -1,0 +1,42 @@
+<view class="shadow" wx:if="{{show}}">
+    <view class="shadow_con">
+        <image src="../../image/btn_cancel.png" mode="widthFix" bindtap="closeMajor"></image>
+         <ul id="ul">
+             <block wx:for="{{majorArray}}" wx:key="item" class="ul">
+               <li class="check" data-code="{{item.code}}" data-name="{{item.codeName}}" bindtap="chooseMajor" style="color:{{item.code == currentItemCode?'#f44a33':'#333'}};border-color: {{item.code == currentItemCode?'#f44a33':''}}">{{item.codeName}}</li>
+            </block>
+        </ul> 
+    </view>
+</view>
+<view class="container">
+    <view class="box">
+        <view class="searchBox" bindtap="search">
+            <image src="../../image/icon_search.png" id="search" mode="widthFix"></image>	
+            <text style="color: #999;">输入关键字，搜索艺培机构</text>
+        </view>
+        <view class="add" bindtap="login">{{showText}}</view>
+    </view>	
+    <view class="tab_list">
+        <view class="all">
+            <span bindtap="showMajor">{{majorName}}</span>
+            <image src="../../image/navigate.png" mode="widthFix"></image>
+        </view>
+        <view class="right">
+            <span class="major" bindtap="major1" data-code="{{majorCode1}}" style="color:{{majorCode1 == currentItemCode2?'#f44a33':'#333'}};">{{major1}}</span>
+            <span class="major" bindtap="major2" data-code="{{majorCode2}}" style="color:{{majorCode2 == currentItemCode2?'#f44a33':'#333'}};">{{major2}}</span>
+            <span class="last" bindtap="major3" data-code="{{majorCode3}}" style="color:{{majorCode3 == currentItemCode2?'#f44a33':'#333'}};">{{major3}}</span>
+            <image src="../../image/btn_list.png" class="btn_list" mode="widthFix" bindtap="showList"></image>
+        </view>
+    </view>
+    <map id="map" 
+    scale="14" 
+    longitude="{{longitude}}"
+    latitude="{{latitude}}"
+    controls="{{controls}}" 
+    bindcontroltap="controltap" 
+    markers="{{markers}}" 
+    bindmarkertap="markertap" 
+    polyline="{{polyline}}" 
+    bindregionchange="regionchange" 
+    show-location style="width: 100%;"></map>
+</view>

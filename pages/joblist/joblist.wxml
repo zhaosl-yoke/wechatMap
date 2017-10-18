@@ -1,0 +1,20 @@
+<!--pages/joblist/joblist.wxml-->
+<view class="contain">
+    <view class="box">
+        <view class="job_list">
+            <scroll-view scroll-y="true" bindscrolltolower="searchScrollLower" style="height: {{height}}">  
+                <block class="result-item" wx:for="{{searchSongList}}" wx:key="unique"  data-data="{{item}}">  
+                    <li data-id="{{item.id}}" bindtap="lookDetail">
+                        <view class="job_type">
+                            <span class="job_name">{{item.name}}</span>
+                            <span class="time">{{item.createTime}}</span>
+                        </view>
+                        <view class="job_msg">{{item.address}}/{{item.workAgeDesc}}/{{item.workType==0?not:item.workType==1?part:all}}</view>
+                    </li>
+                </block>  
+                <view class="loading" hidden="{{!searchLoading}}">正在载入更多...</view>  
+                <view class="loading complete" hidden="{{!searchLoadingComplete}}">已加载全部</view>  
+		    </scroll-view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,74 @@
+/* pages/jobdetail/jobdetail.wxss */
+page{
+    height: 100%;
+	width: 100%;
+	font-size: 28rpx;
+	font-family:"苹方-简","华文细黑","微软雅黑", "Microsoft YaHei","sans-serif";
+	background: #fff;	
+	color: #333;
+}
+.contain{
+	padding: 30rpx 0 0 20rpx;
+}
+.job_type .job_name{
+	height: 54rpx;
+	display: flex;
+	align-items: center;
+}
+.job_name .sex{
+	width: 20rpx;
+	margin-left: 15rpx;
+}
+.job_require .title{
+	line-height: 54rpx;
+	color: #747474;
+	font-size: 24rpx;
+}
+.job_require p{
+	font-size: 24rpx;
+	color: #747474;
+	line-height: 36rpx;
+}
+.job_type .job_msg{
+	height: 88rpx;
+	display: flex;
+	align-items: center;
+	border-bottom: solid 1px #ededed;
+	margin-bottom: 27rpx;
+	font-size: 24rpx;
+	color: #666;
+}
+.job_msg .span{
+	margin-right: 54rpx;
+	display: flex;
+	align-items: center;
+}
+.job_msg .span image{
+	width: 30rpx;
+	margin-right: 14rpx;
+}
+.require_msg{
+	font-size: 24rpx;
+	color: #747474;
+	line-height: 42rpx;
+}
+.require_msg2 view{
+    font-size: 24rpx;
+    color: #747474;
+    line-height: 36rpx;
+}
+.call_mobile{
+	position: absolute;
+	width: 712rpx;
+	height: 88rpx;
+	bottom: 50rpx;
+	left: 50%;
+	background: #f44a33;
+	margin-left: -356rpx;
+	line-height: 88rpx;
+	text-align: center;
+	border-radius: 5rpx;
+	color: #fff;
+	font-size: 30rpx;
+	
+}

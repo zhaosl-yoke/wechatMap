@@ -1,0 +1,83 @@
+body,ul,p,h1,h2,h3,h4,h5,h6,form,fieldset,table,tr,th,td,img,div,dl,dt,dd,input{ 
+	margin:0;
+ 	padding:0;
+}
+ul,ol,li,dl,dt {
+  list-style:none;
+  list-style-type:none;
+  margin:0;
+  padding:0;
+  border:0;
+  background:none;
+  outline:0
+}
+body{
+	font-size:0.28rpx;
+	font-family:"苹方-简","华文细黑","微软雅黑", "Microsoft YaHei","sans-serif"; 
+  margin:0 auto;
+  background:#E5E7E6;
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+textarea{
+  resize:none;
+}
+img{
+  border:none;
+}
+/*清除边框样式*/
+/* input[type="submit"],
+input[type="reset"],
+input[type="button"],
+input[type="radio"],
+button {
+ -webkit-appearance: none;
+ } */
+
+a,a:hover,a:link,a:visited{color:inherit;text-decoration:none;}
+table{border-collapse:collapse;border-spacing:0;}
+i{ display: inline-block; font-style: normal; }
+.ii{ display: inline-block; font-style: normal; }
+img{display: inline-block;}
+img:hover{ cursor: pointer; }
+
+.fl{ float: left; }
+.fr{ float: right; }
+.cl:after,.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+.cl,.clearfix{zoom:1}
+.pr{ position: relative; }
+.pa{ position: absolute; }
+.pf{ position: fixed; }
+.hidden{ display: none; }
+
+.fon12 {font-size:24rpx;}
+.fon13 {font-size:26rpx;}
+.fon14{font-size:28rpx;}
+.fon15 {font-size:30rpx;}
+.fon16{font-size:32rpx;}
+.fon18 {font-size:36rpx;}
+
+.white-bg{background:#FFF;}
+.del{text-decoration:line-through;}
+
+.mr5{margin-right:5rpx;}
+.mr15{margin-right:15rpx;}
+.mt0{margin-top:0!important;}
+.mt5{margin-top: 5rpx!important;}
+.mt10{margin-top: 10rpx!important;}
+.mt15{margin-top: 15rpx!important;}
+.mt20{margin-top: 20rpx!important;}
+.mt25{margin-top: 25rpx!important;}
+
+
+.borT{border-top:1px solid #e8e8e8;}
+.borL{border-left:1px solid #e8e8e8;}
+.borR{border-right:1px solid #e8e8e8}
+.borB{border-bottom:1px solid #e8e8e8;}
+.boder{border:1px solid #e8e8e8;}
+.borN{border:none!important;}
+.cor0d{color:#0dce99;}
+/*字颜色*/
+.colgreen{color:#0dce99;}
+.corff{color:#fff;}
+.alignLeft{text-align: left;}
+.alignCenter{text-align: center;}

@@ -1,0 +1,31 @@
+<import src="../../video_uploader/video_uploader.wxml" />
+<import src="../../image_uploader/image_uploader.wxml" />
+<view class="contain">
+	<view class="addVideo">
+		<view class="videoTop">
+		<view>
+			<text>添加视频</text>
+			<text>添加的视频会在地图上展示哦</text>
+		</view>
+		</view>
+		<template is="video_uploader" data="{{...video}}" />
+	</view>
+	<view class="addPic">
+		<view class="picTop">
+		<view>
+			<text>添加图片</text>
+			<text>添加的图片会在地图上展示哦</text>
+		</view>
+		</view>
+		<template is="image_uploader" data="{{...img}}" />
+		<view class="prompt">
+		<view>
+			<text>使用artapp机构版内容实时同步，还可以根据校区无限量上传哦~</text>
+			<a href="##" style="color:#f44933;">申请机构版>></a>
+		</view>
+		</view> 
+	</view> 
+	<view class="bot">
+		<button class="submit">提交信息</button>
+	</view>
+</view>

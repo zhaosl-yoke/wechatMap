@@ -1,0 +1,35 @@
+{
+  "pages": [
+       "pages/map/map",
+       "pages/list/list",
+       "pages/login/login",
+       "pages/addinst/addinst",
+       "pages/restpsd/restpsd",
+        "pages/search/search",
+        "pages/instdetail/instdetail",
+        "pages/blackboard/blackboard",
+        "pages/joblist/joblist",
+        "pages/instdetailedit/instdetailedit",
+        "pages/editinst/editinst",
+        "pages/editboard/editboard",
+        "pages/uploadtea/uploadtea",
+        "pages/uploadpic/uploadpic",
+        "pages/uploadvideo/uploadvideo",
+        "pages/videolist/videolist",
+       "pages/lookvideo/lookvideo",
+        "pages/lookpic/lookpic",
+      "pages/jobdetail/jobdetail",
+      
+       "pages/addmedia/addmedia",
+       "pages/scroll/scroll",
+       "pages/video/video",
+       "pages/register/register"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Map",
+    "navigationBarTextStyle": "black"
+  },
+  "debug": true
+}

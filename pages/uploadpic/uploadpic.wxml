@@ -1,0 +1,13 @@
+
+<view id="contain">
+    <view class="video" style="background:{{flag?'#000':'#ededed'}}" bindtap="uploadFile">
+        <image wx:if="{{!show}}" src="../../image/camera.png" mode="widthFix" class="icon"></image>
+        <span wx:if="{{!show}}" class="text">添加图片</span>
+        <span wx:if="{{!show}}" class="size">请上传小于5M的图片</span>
+        <image wx:if="{{show}}" src="{{picPath}}" mode="scaleToFill" class="poster"></image> 
+    </view> 
+    <view class="title">
+        <input type="text" placeholder="请输入标题" bindinput="titleInput"/>
+    </view>
+</view>
+<view class="publish" bindtap="publish">发布</view>

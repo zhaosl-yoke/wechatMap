@@ -1,0 +1,11 @@
+<!--pages/editboard/editboard.wxml-->
+<view class="contain">
+    <view class="text">
+        <textarea name="" placeholder="请输入5-100个文字" value="{{content}}" bindinput="contentInput"></textarea>
+    </view>
+    <view class="link">
+        <p>请输入链接地址</p>
+        <input type="text" placeholder="格式如：https://www.baidu.com" value="{{link}}" bindinput="linkInput"/>
+    </view>
+</view>
+<view class="save" bindtap="save">保存</view>

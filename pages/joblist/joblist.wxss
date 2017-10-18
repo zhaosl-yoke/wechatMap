@@ -1,0 +1,49 @@
+/* pages/joblist/joblist.wxss */
+page{
+    height: 100%;
+	width: 100%;
+	font-size: 28rpx;
+	font-family:"苹方-简","华文细黑","微软雅黑", "Microsoft YaHei","sans-serif";
+	background: #fff;	
+	color: #333;
+}
+.contain{
+	padding: 11rpx 0 0 20rpx;
+	display: flex;
+}
+.contain .box {
+	flex: 1;
+	position: relative;
+	overflow: hidden;
+}
+.contain .job_list li{
+	height: 136rpx;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	border-bottom: solid 1px #ededed;
+}
+.search-result{  
+  flex: auto;  
+  position: relative; 
+  width: 100%; 
+  overflow: hidden;
+}  
+.job_list li .job_type{
+	display: flex;
+	justify-content: space-between;
+}
+.job_type .time{
+	margin-right: 20rpx;
+	color: #b0b0b0;
+	font-size: 24rpx;
+}
+.job_list li .job_msg{
+	margin-top: 10rpx;
+	color: #b0b0b0;
+	font-size: 24rpx;
+}
+.complete{
+    line-height: 60rpx;
+    text-align: center;
+}

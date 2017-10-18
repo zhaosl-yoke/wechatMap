@@ -1,0 +1,302 @@
+/* pages/instdetail/instdetail.wxss */
+page{
+	height: 100%;
+	width: 100%;
+	font-size: 28rpx;
+	font-family:"苹方-简","华文细黑","微软雅黑", "Microsoft YaHei","sans-serif";
+	background: #fafafa;	
+	color: #333;
+}
+a{
+	text-decoration: none;
+	color: #333;
+}
+.top{
+	width: 100%;
+	position: relative;
+	height: 336rpx;
+	background: url(https://zslzhaoshuli.github.io/map/img2/bg.png) no-repeat;
+	background-size: cover;
+	background-position: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.box{
+	position: absolute;
+	top:0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(0,0,0,0.2);
+}
+.mui-ellipsis-1 {
+    display: -webkit-box;
+    overflow: hidden;
+    white-space: normal!important;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+.msg {
+	color: #fff;
+	z-index:0;
+    text-align: center;
+}
+.msg .identify{
+	padding: 2rpx 5rpx;
+	text-align: center;
+	line-height: 24rpx;
+	border: solid 1px #fff;
+	border-radius: 5rpx;
+	font-size: 24rpx;
+}
+.msg .inst_name{
+	margin: 12rpx 0 20rpx 0;
+	font-size: 32rpx;
+	font-weight: bold;
+}
+.msg .inst_mobile{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.msg .inst_mobile image{
+	width: 36rpx;
+	margin-right: 20rpx;
+}
+
+.inst_msg{
+	padding-bottom: 88rpx;
+}
+.inst_msg .address_msg{
+	display: flex;
+	height: 92rpx;
+	border-bottom: solid 1px #ededed;
+	align-items: center;
+	background: #fff;
+	padding-left: 20rpx;
+}
+.address_msg image:nth-of-type(1) {
+	width: 32rpx;
+	margin-right: 13rpx;
+}
+.address_msg image:nth-of-type(2) {
+	width: 16rpx;
+	margin-right: 22rpx;
+	margin-left: 30rpx;
+}
+.address_msg .address{
+	color: #333;
+	flex: 1;
+	font-size: 28rpx;
+}
+.inst_msg .inst_intro{
+	padding: 20rpx 0 30rpx 0;
+	box-sizing: border-box;
+	border-bottom: solid 1px #ededed;
+	background: #fff;
+	padding-left: 20rpx;
+}
+.inst_intro p{
+	line-height: 40rpx;
+	font-size: 24rpx;
+    color: #666;
+}
+.mui-ellipsis-1{
+	display: -webkit-box;
+    overflow: hidden;
+    white-space: normal!important;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+.mui-ellipsis-3{
+	display: -webkit-box;
+    overflow: hidden;
+    white-space: normal!important;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+.inst_intro .more{
+	display: block;
+	width: 30rpx;
+	margin: auto;
+	margin-top: 10rpx;
+}
+.inst_major{
+	padding-bottom: 30rpx;
+	margin-bottom: 20rpx;
+	background: #fff;
+	padding-left: 20rpx;
+}
+.inst_major p{
+	line-height: 78rpx;
+	font-size:24rpx;
+}
+.inst_major ul {
+	display: flex;
+	list-style: none;
+    flex-wrap: wrap;
+}
+.inst_major ul #none{
+	width: 100%;
+    background: #fff;
+    text-align: left;
+    margin-bottom: 0rpx;
+    padding: 0;
+}
+.inst_major ul li{
+	height: 60rpx;
+	margin-right: 15rpx;
+	background: #f5f5f5;
+	text-align: center;
+	line-height: 60rpx;
+	border-radius: 5rpx;
+	padding: 0 34rpx;
+    margin-bottom: 20rpx;
+    color: #666;
+    font-size: 26rpx;
+}
+.blackboard{
+	background: #fff;
+	padding-left: 20rpx;
+	padding-top: 30rpx;
+	margin-bottom: 20rpx;
+}
+.blackboard .title{
+	font-size: 30rpx;
+}
+.blackboard .board_msg{
+	display: flex;
+	height: 90rpx;
+	align-items: center;
+}
+.time{
+    margin-right:22rpx;
+    font-size:20rpx;
+}
+.board_msg image{
+	width: 32rpx;
+	margin-right: 13rpx;
+}
+.board_msg p{
+	flex: 1;
+	font-size:26rpx;
+}
+.board_msg span{
+	margin-right: 23rpx;
+	font-size: 20rpx;
+	margin-left: 20rpx;
+}
+.job{
+	background: #fff;
+	padding-left: 20rpx;
+	padding-top: 20rpx;
+	margin-bottom: 20rpx;
+}
+.job .title{
+	display: flex;
+	height: 50rpx;
+	align-items: center;
+}
+.job .title view{
+	flex: 1;
+}
+.job .title image{
+	width: 16rpx;
+    margin-right: 22rpx;
+}
+.job ul li{
+	list-style: none;
+	height: 73rpx;
+	display: flex;
+	align-items: center;
+	border-bottom: solid 1px #eee;
+}
+.job ul li:nth-last-child(1) {
+	border: none;
+}
+.job ul li p{
+	flex: 1;
+	font-size: 26rpx;
+}
+.job ul li span{
+	margin-right: 22rpx;
+	font-size: 20rpx;
+}
+.tea_video{
+	padding-top: 30rpx;
+	background: #fff;
+	padding-left: 20rpx;
+	box-sizing: border-box;
+	padding-bottom: 58rpx;
+}
+.tea_video ul{
+	display: flex;
+	flex-wrap: wrap;
+}
+.tea_video ul li{
+	margin: 30rpx 20rpx 0 0;
+	padding-bottom: 4rpx;
+	width: 223rpx;
+}
+.tea_video ul li .video{
+	position: relative;
+	width: 223rpx;
+	height: 126rpx;
+	background-size: cover;
+	background-position: center;
+	border-radius: 5rpx;
+}
+.tea_video ul li .video .play{
+	position: absolute;
+	width: 50rpx;
+    top: 50%;
+    left: 50%;
+    margin-left: -25rpx;
+    margin-top: -25rpx;
+}
+.tea_video ul li .video image{
+    width: 223rpx;
+    height: 126rpx;
+}
+.tea_video ul li .text{
+	line-height: 36rpx;
+	margin-top: 15rpx;
+	font-size: 24rpx;
+}
+.tea_video .look_more{
+	height: 42rpx;
+	display: flex;
+	justify-content: center;
+	margin-top: 20rpx;
+}
+.tea_video .look_more text{
+	line-height: 42rpx;
+	color: #9a9a9a;
+	font-size: 24rpx;
+	border-bottom: solid 1px #999;
+}
+.call{
+	position: fixed;
+    width: 100%;
+    bottom: 0;
+	height: 88rpx;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: #f44a33;
+	border-top: solid 1px #cecccd;
+}
+.call image{
+	width: 40rpx;
+	margin-right: 22rpx;
+}
+.call text{
+	color: #fff;
+}

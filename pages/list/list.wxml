@@ -1,0 +1,69 @@
+<view class="shadow" wx:if="{{show}}">
+    <view class="shadow_con">
+        <image src="../../image/btn_cancel.png" mode="widthFix" bindtap="closeMajor"></image>
+         <ul id="ul">
+             <block wx:for="{{majorArray}}" wx:key="item" class="ul">
+               <li class="check" data-code="{{item.code}}" data-name="{{item.codeName}}" bindtap="chooseMajor" style="color:{{item.code == currentItemCode?'#f44a33':'#333'}};border-color: {{item.code == currentItemCode?'#f44a33':''}}">{{item.codeName}}</li>
+            </block>
+        </ul> 
+    </view>
+</view>
+<image src="../../image/loading.gif" class="loading" style="display:none;" mode="widthFix"></image>
+<view class="container">
+    <view class="box">
+        <view class="searchBox">
+            <image src="../../image/icon_search.png" id="search" mode="widthFix"></image>	
+            <text style="color: #999;">输入关键字，搜索艺培机构</text>
+        </view>
+        <view class="add" bindtap="login">{{showText}}</view>
+    </view>	
+    <view class="tab_list">
+        <view class="all">
+            <span bindtap="showMajor">{{majorName}}</span>
+            <image src="../../image/navigate.png" mode="widthFix"></image>
+        </view>
+        <view class="right">
+            <span class="major" bindtap="major1" data-code="{{majorCode1}}" style="color:{{majorCode1 == currentItemCode2?'#f44a33':'#333'}};">{{major1}}</span>
+            <span class="major" bindtap="major2" data-code="{{majorCode2}}" style="color:{{majorCode2 == currentItemCode2?'#f44a33':'#333'}};">{{major2}}</span>
+            <span class="last" bindtap="major3" data-code="{{majorCode3}}" style="color:{{majorCode3 == currentItemCode2?'#f44a33':'#333'}};">{{major3}}</span>
+        </view>
+    </view>
+    <view class="sort_type">
+        <view class="distance active" bindtap="mount" data-id="1" style="color:{{1 == id?'#f44a33':'#333'}};border-color:{{1 == id?'#f44a33':'#ccc'}}">按视频数量</view>
+        <view class="amount" bindtap="distance" data-id="2" style="color:{{2 == id?'#f44a33':'#333'}};border-color:{{2 == id?'#f44a33':'#ccc'}}">按距离排序</view>
+        <image src="../../image/btn_map.png" class="btn_list" mode="widthFix" bindtap="map"/>
+    </view>
+    <view id="list">
+        <ul class="list_con" wx:if="{{!showPrompt}}">
+            <block wx:for="{{listArray}}" wx:key="item" class="list_con">
+                <li data-schoolid="{{item.id}}" data-institutionid="{{item.userId}}" data-code="{{item.versionCode}}" bindtap="detail">
+                    <view class="poster" wx:if="{{!item.thumb}}">
+                        <image class="add_pic" src="../../image/add_picture.png" mode="widthFix"/>
+                        <text>暂无封面</text>
+                    </view>
+                    <view class="poster" wx:if="{{item.thumb}}" style="border:none">
+                        <image src="{{url+item.thumb}}" mode="scaleToFill" class="pic"/>
+                    </view>
+                    <view class="detail">
+                        <view class="inst_name mui-ellipsis-1">
+                            <text class="flag" wx:if="{{item.versionCode== Full || item.versionCode==Lite}}">认证</text>
+                            <text>{{item.institutionName + item.addressDesc}}</text>
+                        </view>
+                        <view class="address mui-ellipsis-1">{{item.province + item.city + item.area + item.address}}</view>
+                        <view class="data">
+                            <view class="span" style="margin-right: 0.5rem;">
+                                <image src="../../image/amount.png" mode="widthFix"/>
+                                <text class="video_amount">{{item.mediaCount}}</text>
+                            </view>
+                            <view class="span">
+                                <image src="../../image/distance.png" mode="widthFix"/>
+                                <text class="inst_distance">{{item.distance < 1000?(item.distance|Int) + m : (item.distance|Int)/1000 + km}}</text>
+                            </view>
+                        </view>
+                    </view>
+                </li>
+            </block>
+        </ul>
+         <view wx:if="{{showPrompt}}" class="none">暂无此专业的校区</view> 
+    </view>
+</view>

@@ -1,0 +1,10 @@
+<!--viewages/blackboard/blackboard.wxml-->
+<view class="contain">
+    <view class="title">小黑板标题</view>
+    <view class="text">{{content}}</view>
+    <view class="link" wx:if="{{link}}">
+        <text style="disviewlay:block;">点此链接查看详情：</text>
+        <!--微信小程序不支持打开外部链接  -->
+        <navigator url="{{link}}">{{link}}</navigator>
+    </view>
+</view>

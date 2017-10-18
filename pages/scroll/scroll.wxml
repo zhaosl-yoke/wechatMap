@@ -1,0 +1,44 @@
+<view class="top">
+	<view class="title">鲍蕙荞钢琴艺术培训学校（鲍蕙荞钢琴学校中轴校区）</view>
+	<view class="major">专业:钢琴、其他</view>
+</view>
+<view class="center">
+	<view class="box">
+		<image src="../../image/address.png" mode="widthFix"></image>
+		<view class="address">北京市东城区鼓楼外大街27号</view>
+	</view>
+	<view class="box">
+		<image src="../../image/phone.png" mode="widthFix"></image>
+		<view class="phone">010-84123685</view>
+	</view>
+	</view>
+	<view class="search">  
+	<view class="search_title">
+		教学视频
+		<view class="more" bindtap="more">查看更多</view>
+	</view>
+	<view class="search-result">  
+		<scroll-view scroll-y="true">  
+			<view class="result-item" wx:for="{{searchSongList}}" wx:key="unique"  data-data="{{item}}">  
+				<view class="li" bindtap="play_video" data-data="{{item}}" style="background:url({{(item.videoCover?url + item.videoCover:defaultPath)}}) no-repeat;background-position:center;background-size:100%;">
+					<image src="../../image/pause.png" class="pause"></image>
+				</view>
+				<view class="time">上传时间：{{item.createTime}}</view>
+				<view class="bottomList">
+					<view class="list">
+						<image src="../../image/zan.png" mode="widthFix"></image>
+						<i>{{item.likeCount}}</i>
+					</view>
+					<view class="list">
+						<image src="../../image/pinglun.png" mode="widthFix"></image>
+						<i>{{item.commentCount}}</i>
+					</view>
+					<view class="list last">
+						<image src="../../image/share.png" mode="widthFix"></image>
+						<i>{{item.shareCount}}</i>
+					</view>
+				</view>
+			</view>   
+		</scroll-view>    
+	</view>  
+</view>  

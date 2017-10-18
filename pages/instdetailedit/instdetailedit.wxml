@@ -1,0 +1,120 @@
+<!--pages/instdetail/instdetail.wxml-->
+<view class="contain">
+
+    <checkbox-group bindchange="serviceValChange">  
+        <view class="service_selection flex">  
+            <block wx:for="{{allGoodsFilte}}">  
+            <view class=" item">  
+                <label class="checkbox {{item.checked?'is_checked':''}}">  
+                <checkbox value="{{item.value}}" checked="{{item.checked}}" hidden="false" />{{item.name}}  
+                </label>  
+            </view>  
+            </block>  
+        </view>  
+    </checkbox-group>  
+
+
+    <view class="shadow" wx:if="{{show}}">
+        <view class="shadow_con">
+            <image src="../../image/btn_cancel.png" class="cancel" mode="widthFix" bindtap="closeSchool"></image>
+            <ul>
+                <block wx:for="{{schoolArray}}" wx:key="item">
+                    <li class="li" data-id="{{item.id}}" data-name="{{item.addressDesc}}" data-inst="{{item.userId}}" data-school="{{item.id}}" style="color:{{item.id == currentItemId?'#f44a33':'#333'}};border-color: {{item.id == currentItemId?'#f44a33':''}}" bindtap="chooseSchool">{{item.addressDesc}}</li>
+                </block>
+            </ul>
+        </view>
+    </view>
+    <view class="shadow2" wx:if="{{showMajor}}">
+		<view class="shadow_con2">
+			<view class="top">
+				<image src="../../image/btn_cancel.png" class="cancel" mode="widthFix" bindtap="closeMajor2"></image>
+				<span class="save" bindtap="closeMajor">保存</span>
+			</view>
+            <checkbox-group bindchange="chooseMajor">  
+                <view>  
+                    <block wx:for="{{majorArrayTotal}}" wx:key="item">
+                        <label class="checkbox">     
+                            <view class="item {{item.checked?'is_checked':''}}">  
+                                    <checkbox value="{{item.index}}" data-data="{{item.code}}" checked="{{item.checked}}" hidden="false" />{{item.codeName}}  
+                            </view>  
+                        </label> 
+                    </block>  
+                </view>  
+            </checkbox-group> 
+		</view>
+	</view>
+    <view class="choose_school" bindtap="tabSchool">
+        <span>选择校区</span>
+        <view class="choose">
+            <span>{{schoolName}}</span>
+            <image src="../../image/navigate.png" mode="widthFix"></image>
+        </view>
+    </view>
+    <p class="border"></p>
+    <view class="tea_video">
+        <p class="title">
+            <span>教学成果</span>
+            <image src="../../image/navigate.png" mode="widthFix" bindtap="lookMore"></image>
+        </p>
+        <ul>
+             <li id ="add_video" bindtap="addtea">
+                <image src="../../image/camera.png" mode="widthFix"></image>
+                <span>添加视频/图片</span>
+            </li> 
+            <block wx:for="{{teaArray}}" wx:key="item">
+                <li>
+                    <view class="video" data-id="{{item.id}}" data-minetype="{{item.minetype}}">
+                        <image wx:if="{{item.minetype == pic}}" src="{{url+item.catalog+a+item.filename+b+item.extension}}" mode="aspectFill" bindtap="lookPic" data-id="{{item.id}}"></image>
+                            <image wx:if="{{item.minetype == video}}" src="{{url+item.thumb}}" mode="aspectFill" bindtap="lookVideo" data-id="{{item.id}}"></image> 
+                        <image wx:if="{{item.minetype == video}}" src="../../image/play.png" class="play" mode="widthFix"></image>
+                    </view>
+                    <p class="text">{{item.title}}</p>
+                </li>
+            </block> 
+        </ul>
+    </view>
+    <p class="border"></p>
+    <view class="blackboard">
+        <p class="title">
+            <span>小黑板</span>
+            <image src="../../image/edit.png" mode="widthFix" bindtap="editBoard"></image>
+        </p>
+        <view class="board_msg">
+            <image src="../../image/inform.png" mode="widthFix"></image>
+            <p class="mui-ellipsis-1">{{content}}</p>
+            <span class="time">{{time}}</span>
+        </view>
+    </view>
+    <p class="border"></p>
+    <view class="inst_msg">
+        <view class="title">
+            <span>校区简介</span>
+            <image src="../../image/edit.png" mode="widthFix" bindtap="editInst"></image>
+        </view>
+        <view class="inst_intro">
+             <p class="con">{{schoolIntro}}</p>
+        </view>
+    </view>
+    <p class="border"></p>
+    <view class="inst_major">
+        <p>开设专业</p>
+        <ul>
+            <li id="add" bindtap="addMajor">+</li>
+            <block wx:for="{{majorArray}}" wx:key="item">
+                <li data-id="{{item.id}}" bindtap="deleteMajor">{{item.majorName}}<image src="../../image/error.png" class="delete" mode="widthFix"></image></li>
+            </block> 
+        </ul>
+    </view>
+    <p class="border"></p>
+    <view class="detail_msg">
+        <view class="title">
+            <span>校区信息</span>
+            <image src="../../image/edit.png" mode="widthFix" bindtap="editInst"></image>
+        </view>
+        <view class="con">
+            <view>学校名称：{{schoolName2}}</view>
+            <view>招生咨询电话：{{phone}}</view>
+            <view>联系地址：{{address}}</view>
+        </view>
+    </view>
+</view>

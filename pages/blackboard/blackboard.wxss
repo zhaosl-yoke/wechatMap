@@ -1,0 +1,33 @@
+/* pages/blackboard/blackboard.wxss */
+page{
+    height: 100%;
+	width: 100%;
+	font-size: 28rpx;
+	font-family:"苹方-简","华文细黑","微软雅黑", "Microsoft YaHei","sans-serif";
+	background: #fff;	
+	color: #333;
+}
+.contain{
+	padding: 16rpx 20rpx 0 20rpx;
+}
+.container .title{
+	height: 76rpx;
+	width: 100%;
+	text-align: center;
+	line-height: 76rpx;
+}
+.container .text{
+	text-align: justify;
+	line-height: 42rpx;
+	color: #666;
+	font-size: 24rpx;
+	margin-bottom: 20rpx;
+}
+.container .link{
+	color: #666;
+	font-size: 24rpx;
+}
+.container a{
+	word-wrap: break-word;
+	word-break: break-all;
+}

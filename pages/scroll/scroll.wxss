@@ -1,0 +1,145 @@
+page{  
+  display: flex;  
+  flex-direction: column;  
+  height: 100%; 
+  background: #ccc;
+  font-family:"苹方-简","华文细黑","微软雅黑", "Microsoft YaHei","sans-serif"; 
+  font-size: 32rpx;
+} 
+.top{
+  background: #fff;
+  margin-bottom: 20rpx;
+  padding: 20rpx;
+} 
+.center{
+  margin-bottom: 20rpx;
+  padding: 20rpx;
+  background: #fff;
+}
+.center .box{
+  display: flex;
+  align-content: center;
+  margin-bottom: 10rpx;
+}
+.box image{
+  width: 46rpx;
+  margin-right: 20rpx;
+}
+/*搜索*/  
+.search{  
+  flex: auto;  
+  display: flex;  
+  flex-direction: column;  
+  background: #fff;  
+  padding: 0 10rpx;
+  box-sizing: border-box;
+}  
+.search_title{
+  position: relative;
+  text-align: center;
+  line-height: 82rpx;
+}
+.more{
+  position: absolute;
+  right: 10rpx;
+  top: 0;
+  font-size: 28rpx;
+  color: #70dde4;
+}
+/*搜索结果*/  
+.search-result{  
+  flex: auto;  
+  position: relative; 
+  width: 100%; 
+}  
+.search-result scroll-view{  
+  position: absolute;  
+  bottom: 0;  
+  left: 0;  
+  right: 0;  
+  top: 0;  
+}  
+.result-item{ 
+  position: relative;
+  display: inline-block;   
+  width: 49%; 
+  margin-right: 2%;
+}  
+.result-item:nth-child(2n) {
+  margin-right: 0;
+}
+.result-item .li{
+  position: relative;
+  width: 100%;
+  height: 200rpx;
+}
+.result-item .pause{  
+  position: absolute;  
+  left: 50%;  
+  top: 50%; 
+  margin-left: -30rpx;
+  margin-top: -30rpx; 
+  width: 60rpx;  
+  height: 60rpx;  
+}  
+.result-item .title,  
+.result-item .subtitle{  
+  overflow: hidden;  
+  text-overflow: ellipsis;  
+  white-space: nowrap;  
+  line-height: 36rpx;  
+}  
+.result-item .title{  
+  margin-bottom: 4rpx;  
+  color: #000;  
+}  
+.result-item .subtitle{  
+  color: #808080;  
+  font-size: 24rpx;  
+}  
+.result-item:first-child .subtitle text{  
+  margin-right: 20rpx;  
+}  
+.result-item:not(:first-child) .subtitle text:not(:first-child):before{  
+  content: '/';  
+  margin: 0 8rpx;  
+} 
+.result-item .bottomList{
+  display: -webkit-box;
+  margin-bottom: 10rpx;
+}
+.result-item .time{
+  margin-bottom: 10rpx;
+}
+.bottomList .list{
+  display: block;
+  -webkit-box-flex: 1;
+  text-align: center;
+  border-right: solid 1px #ececec;
+}
+.last{
+  border: none;
+}
+.result-item .bottomList image{
+  width: 32rpx;
+  margin-right: 10rpx;
+  vertical-align: middle;
+} 
+.loading{  
+  padding: 10rpx;  
+  text-align: center;  
+}  
+.loading:before{  
+  display: inline-block;  
+  margin-right: 5rpx;  
+  vertical-align: middle;  
+  content: '';  
+  width: 40rpx;  
+  height: 40rpx;  
+  /* background: url(../../images/icon-loading.png) no-repeat;   */
+  background-size: contain;  
+  animation: rotate 1s linear infinite;  
+}  
+.loading.complete:before{  
+  display: none;  
+}  

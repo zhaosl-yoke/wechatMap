@@ -1,0 +1,18 @@
+<!--pages/restpsd/restpsd.wxml-->
+<view class="contain">
+    <view class="inputs">
+        <view class="input">
+            <input type="text" placeholder="请输入手机号" class="mobile" value="{{mobile}}" bindinput="mobileInput" bindblur="mobileBlur"/>
+            <span class="code" class="{{is_show?'show':'hide'}}" bindtap="receiveCode">获取验证码</span>
+            <span id="code" class="{{is_show?'hide':'show'}}">请{{last_time}}秒后重试</span>
+        </view>
+        <view class="input" style="padding-top: 0.2rem;">
+            <input type="text" placeholder="请输入验证码" class="receive_code" value="{{code}}" bindinput="codeInput"/>
+        </view>
+        <view class="input" style="padding-top: 0.2rem;">
+            <input type="{{psd_type}}" placeholder="请设置新密码" class="psd" value="{{psd}}" bindinput="psdInput"/>
+            <image src="../../image/eye.png" class="look lock" mode="widthFix" bindtap="lookPsd"/>
+        </view>
+    </view>
+    <view class="btn" id="btn" bindtap="confirm" style="background:{{red}}">确定</view>
+</view>

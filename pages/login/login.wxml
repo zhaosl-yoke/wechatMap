@@ -1,0 +1,20 @@
+<view class="contain">
+    <view class="top">
+        <image src="../../image/book.png" class="book" mode="widthFix"/>
+        <view class="logo">中国好艺培</view>
+    </view>
+    <view class="inputs">
+        <view class="input">
+            <text class="mobile_top">+86</text>
+            <input placeholder="请输入手机号" class="mobile" value="{{userValue}}" placeholder-class="color:#999;" bindblur="userBlur" bindinput="userInput"/>
+        </view>
+        <view class="input" style="padding-top: 20rpx;">
+            <input password="true" placeholder="输入密码" class="psd" value="{{psdValue}}" placeholder-class="color:#999;" bindblur="psdBlur" bindinput="psdInput"/>
+        </view>
+    </view>
+    <view class="forget" bindtap="forget">忘记密码？</view>
+    <view class="btn" id="btn" bindtap="login" style="background:{{red}}">登录</view>
+    <view class="register" bindtap="register">
+        <text>注册</text>
+    </view>
+</view>

@@ -1,0 +1,77 @@
+<!--pages/instdetail/instdetail.wxml-->
+<view class="contain">
+    <view class="top">
+        <view class="box"></view>
+        <view class="msg" align="center">
+            <text class="identify" wx:if="{{certification}}">认证</text>
+            <view class="inst_name">{{instName}}</view>
+            <view class="inst_mobile">
+                <image src="../../image/mobile.png" mode="widthFix"></image>
+                <text>{{phone}}</text>
+            </view>
+        </view>
+    </view>
+    <view class="inst_msg">
+        <a class="address_msg" data-lat="{{lat}}" data-lng="{{lng}}" bindtap="moveTo">
+            <image src="../../image/address.png" mode="widthFix"></image>
+            <text class="address mui-ellipsis-1">{{address}}</text>
+            <image src="../../image/navigate.png" mode="widthFix"></image>
+        </a>
+        <view class="inst_intro">
+            <p class="{{open?'con':'con mui-ellipsis-3'}}">{{intro}}</p>
+            <image wx:if="{{showIcon}}" src="{{morePic}}" class="more" mode="widthFix" bindtap="fold"/>
+        </view>
+        <view class="inst_major">
+            <p>开设专业：</p>
+            <ul>
+                <block wx:for="{{majorArray}}" wx:key="item">
+                    <li data-code="{{item.majorCode}}" bindtap="chooseMajor">{{item.majorName}}</li>
+                </block>  
+            </ul>
+        </view>
+        <view class="blackboard">
+            <p class="title">小黑板</p>
+            <view class="board_msg" bindtap="lookBoard">
+                <image src="../../image/inform.png" mode="widthFix"/>
+                <p class="mui-ellipsis-1">{{content}}</p>
+                <text class="time">{{time}}</text>
+            </view>
+        </view>
+        <view class="job" wx:if="{{showJob}}">
+            <p class="title" bindtap="lookJob">
+                <view>招聘信息</view>
+                <image src="../../image/navigate.png" mode="widthFix"></image>
+            </p>
+            <ul>
+                 <block wx:for="{{jobArray}}" wx:key="item">
+                    <li data-id="{{item.id}}" bindtap="lookDetail">
+                        <p>{{item.name}}</p>
+                        <span>{{item.createTime}}</span>
+                    </li>
+                </block>   
+            </ul>
+        </view>
+        <view class="tea_video">
+            <p class="title">教学成果</p>
+            <ul>
+                <block wx:for="{{teaArray}}" wx:key="item">
+                    <li>
+                        <view class="video" data-id="{{item.id}}" data-minetype="{{item.minetype}}">
+                            <image wx:if="{{item.minetype == pic}}" src="{{url+item.catalog+a+item.filename+b+item.extension}}" mode="aspectFill" bindtap="lookPic" data-id="{{item.id}}"></image>
+                             <image wx:if="{{item.minetype == video}}" src="{{url+item.thumb}}" mode="aspectFill" bindtap="lookVideo" data-id="{{item.id}}"></image> 
+                            <image wx:if="{{item.minetype == video}}" src="../../image/play.png" class="play" mode="widthFix"></image>
+                        </view>
+                        <p class="text">{{item.title}}</p>
+                    </li>
+                </block> 
+            </ul>
+            <view class="look_more" bindtap="lookMore">
+                <text style="{{borderStyle}}">{{moreText}}</text>
+            </view>
+        </view>
+    </view>
+    <view class="call" bindtap="call">
+        <image src="../../image/mobile.png" mode="widthFix"></image>
+        <text>拨打电话</text>
+    </view>
+</view>

@@ -1,0 +1,48 @@
+/* pages/editboard/editboard.wxss */
+page{
+    height: 100%;
+	width: 100%;
+	font-size: 28rpx;
+	font-family:"苹方-简","华文细黑","微软雅黑", "Microsoft YaHei","sans-serif";
+	background: #fff;	
+	color: #333;
+}
+.contain{
+	padding-left: 20rpx;
+}
+.contain .text textarea{
+	height: 150rpx;
+	width: 100%;
+	padding-top: 25rpx;
+	border: none;
+	outline: none;
+	border-bottom: solid 1px #ededed;
+}
+.contain .link{
+	height: 128rpx;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	border-bottom: solid 1px #ededed;
+}
+.link input{
+	display: block;
+	border: none;
+	outline: none;
+	padding-top: 12rpx;
+}
+.save{
+	position: absolute;
+	width: 712rpx;
+	height: 88rpx;
+	bottom: 50rpx;
+	left: 50%;
+	background: #f44a33;
+	margin-left: -356rpx;
+	line-height: 88rpx;
+	text-align: center;
+	border-radius: 5rpx;
+	color: #fff;
+	font-size: 30rpx;
+	
+}

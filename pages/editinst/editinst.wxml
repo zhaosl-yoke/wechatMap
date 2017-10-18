@@ -1,0 +1,51 @@
+<view class="contain">
+    <view class="inst">
+        <view class="input">
+            <text class="left">校区名称</text>
+            <input type="text" style="text-align:{{direction}}" placeholder="{{placeholder}}" value="{{institutionName}}" bindinput="institutionNameInput" bindfocus="institutionNameFocus"/>
+        </view>
+        <view class="input">
+            <text class="left">地区</text>
+            <input type="text" style="text-align:{{directionA}}" value="{{province}} {{city}} {{county}}" focus="{{focus}}" bindtap="open" />
+        </view>
+        <view class="input">
+            <text class="left">街道</text>
+            <input type="text" style="text-align:{{direction3}}" placeholder="{{placeholder3}}" value="{{address}}" bindinput="addressInput" bindfocus="addressFocus"/>
+        </view>
+        <view class="input">
+            <text class="left">招生电话</text>
+            <input type="text" style="text-align:{{direction5}}" placeholder="{{placeholder5}}" value="{{phone}}" class="phone" bindinput="phoneInput" bindfocus="phoneFocus"/>
+        </view>
+        <textarea value="{{schoolIntro}}" placeholder="{{placeholder6}}" bindinput="schoolIntroInput" bindfocus="schoolIntroFocus"></textarea>
+        <view class="add_pic">
+            <view class="pic" bindtap="uploadImage">
+                <image src="../../image/add_picture.png" class="icon_pic" mode="widthFix" wx:if="{{!showPic}}"></image>
+                <text wx:if="{{!showPic}}">上传图片</text>
+                <image src="{{picPath}}" class="previewPic" mode="widthFix" wx:if="{{showPic}}"></image>
+            </view>
+            <view class="prompt">
+                <text>请上传机构正门照片要求校区名称清晰可见</text>
+            </view>
+        </view>
+    </view>
+    <view class="bot" bindtap="save">
+        <view>保存</view>
+    </view>
+</view>
+<view wx:if="{{condition}}" class="citypicker">
+    <picker-view indicator-style="height: 50px;" style="width: 100%; height: 300px;" value="{{value}}" bindchange="bindChange" class="citybody">
+        <view class="cityheader">
+            <view bindtap="open" class="city-cancel">取消</view>
+            <view bindtap="open" class="city-true">确定</view>
+        </view>
+        <picker-view-column>
+            <view wx:for="{{provinces}}" wx:key="item" style="line-height: 50px;padding-left:10px;color:#333">{{item}}</view>
+        </picker-view-column>
+        <picker-view-column>
+            <view wx:for="{{citys}}" wx:key="item" style="line-height: 50px;padding-left:10px;">{{item}}</view>
+        </picker-view-column>
+        <picker-view-column>
+            <view wx:for="{{countys}}" wx:key="item" style="line-height: 50px;padding-left:10px;">{{item}}</view>
+        </picker-view-column>
+    </picker-view>
+</view>

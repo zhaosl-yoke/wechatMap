@@ -1,0 +1,59 @@
+/* pages/serach/serach.wxss */
+page{
+    height: 100%;
+	width: 100%;
+	font-size: 28rpx;
+	font-family:"苹方-简","华文细黑","微软雅黑", "Microsoft YaHei","sans-serif";
+	background: #fff;	
+	color: #333;
+}
+.contain {
+	position: relative;
+	height:100vh;
+	display:flex;
+	flex-direction:column;
+	overflow: hidden;
+}
+#none{
+	border: none;
+}
+.top{
+	padding: 0 20rpx;
+	height: 102rpx;
+	flex: 0 0 102rpx;
+	display: flex;
+	background: #f8f8fa;
+	align-items: center;
+	justify-content: space-between;
+}
+.top .searchBox{
+	flex: 1;
+	height: 62rpx;
+	background: #fff;
+	display: flex;
+	align-items: center;
+}
+.top .searchBox image{
+	width: 25rpx;
+	flex: 0 0 25rpx;
+	margin-left: 16rpx;
+	margin-right: 16rpx;
+}
+.searchBox input{
+	border: none;
+	outline: none;
+	flex: 1;
+}
+.top .cancel{
+	margin-left: 20rpx;
+}
+.search_list {
+	padding: 0 20rpx;
+	overflow: auto;
+}
+.search_list li{
+	height: 86rpx;
+	display: flex;
+	align-items: center;
+	border-bottom: solid 1px #efefef;
+}

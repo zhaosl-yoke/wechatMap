@@ -1,0 +1,4 @@
+<!--pages/lookvideo/lookvideo.wxml-->
+<view class="video-content">
+    <video id="video" controls="controls" preload="auto" src="{{videoUrl}}" objectFit="cover" autoplay poster="{{thumb}}"></video>
+</view>

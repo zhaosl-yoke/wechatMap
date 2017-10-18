@@ -1,0 +1,34 @@
+<!--pages/videolist/videolist.wxml-->
+<view class="contain">
+    <view class="box">
+        <view class="video_list">
+         <scroll-view scroll-y="true" bindscrolltolower="searchScrollLower" style="height: {{height}}px">  
+               <checkbox-group bindchange="chooseVideo">
+                    <block class="result-item" wx:for="{{searchSongList}}" wx:key="unique"  data-data="{{item}}"> 
+                        <li>
+                            <view class="video" data-id="{{item.id}}" data-minetype="{{item.minetype}}">
+                                <image wx:if="{{item.minetype == pic}}" src="{{url+item.catalog+a+item.filename+b+item.extension}}" mode="aspectFill" bindtap="lookPic" data-id="{{item.id}}" class="bg_img"></image>
+                                <image wx:if="{{item.minetype == video}}" src="{{url+item.thumb}}" mode="aspectFill" bindtap="lookVideo" data-id="{{item.id}}" class="bg_img"></image> 
+                                <image wx:if="{{item.minetype == video}}" src="../../image/play.png" class="play" mode="widthFix"></image>
+                                <label for="{{item.index}}"> 
+                                    <view class="checkbox">
+                                        <checkbox value="{{item.index}}" checked="{{item.checked}}" hidden="false" id="{{item.index}}"/>
+                                        <image src="{{item.checked?checkPath:noCheckPath}}" class="check check_img" mode="widthFix"></image>
+                                    </view>
+                                </label>  
+                            </view>
+                            <p class="text">{{item.title}}</p>
+                        </li>
+                    </block>
+                </checkbox-group>
+                <view class="loading" hidden="{{!searchLoading}}">正在载入更多...</view>  
+                <view class="loading complete" hidden="{{!searchLoadingComplete}}">已加载全部</view>  
+		    </scroll-view>
+        </view>
+    </view>
+</view>
+ <view class="bottom">
+    <span class="all check" bindtap="all" style="color:{{selectedAllStatus?'#f44a33':'#9a9a9a'}}">全选</span>
+    <span class="to_top" bindtap="toTop">置顶</span>
+    <span class="delete" bindtap="deleteVideo">移除</span>
+</view> 
